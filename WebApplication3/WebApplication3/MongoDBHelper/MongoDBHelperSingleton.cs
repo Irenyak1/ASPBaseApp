@@ -23,11 +23,11 @@ namespace WebApplication3.MongoDBHelper
         {
             AzureServiceTokenProvider azureServiceTokenProvider = new AzureServiceTokenProvider();
             KeyVaultClient keyVaultClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback));
-            password = keyVaultClient.GetSecretAsync("https://myskills-keyvault.vault.azure.net/secrets/DBPassword").Result.Value;
-            userName = keyVaultClient.GetSecretAsync("https://myskills-keyvault.vault.azure.net/secrets/DBUserName").Result.Value;
-            host = keyVaultClient.GetSecretAsync("https://myskills-keyvault.vault.azure.net/secrets/DBHost").Result.Value;
-            dbName = keyVaultClient.GetSecretAsync("https://myskills-keyvault.vault.azure.net/secrets/DBName").Result.Value;
-
+            password = keyVaultClient.GetSecretAsync("https://farmapp-keyvault.vault.azure.net/secrets/Password").Result.Value;
+            userName = keyVaultClient.GetSecretAsync("https://farmapp-keyvault.vault.azure.net/secrets/Username").Result.Value;
+            host = keyVaultClient.GetSecretAsync("https://farmapp-keyvault.vault.azure.net/secrets/HostName").Result.Value;
+            dbName = keyVaultClient.GetSecretAsync("https://farmapp-keyvault.vault.azure.net/secrets/HostDBName").Result.Value;
+            
             MongoClientSettings settings = new MongoClientSettings();
             settings.Server = new MongoServerAddress(host, 10255);
             settings.UseTls = true;

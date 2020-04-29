@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/WebApplication6/WebApplication6/WebApplication6.csproj",
+                "${workspaceFolder}/WebApplication3/WebApplication3/WebApplication3.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/WebApplication6/WebApplication6/WebApplication6.csproj",
+                "${workspaceFolder}/WebApplication3/WebApplication3/WebApplication3.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -32,7 +32,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/WebApplication6/WebApplication6/WebApplication6.csproj",
+                "${workspaceFolder}/WebApplication3/WebApplication3/WebApplication3.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
